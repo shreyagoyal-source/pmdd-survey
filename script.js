@@ -284,25 +284,8 @@ function showSummary() {
   summary.className = "summary";
 
   const heading = document.createElement("h2");
-  heading.textContent = "Thank you! Here's what you shared:";
+  heading.textContent = "Thank you for your responses!";
   summary.appendChild(heading);
-
-  const buildLine = (label, value) => {
-    const p = document.createElement("p");
-    p.innerHTML = `<strong>${label}</strong> ${value || "(no response)"}`;
-    return p;
-  };
-
-  summary.appendChild(buildLine("Fatigue frequency:", formatAnswer(state.answers.fatigueFrequency)));
-  summary.appendChild(buildLine("Cramps severity:", formatAnswer(state.answers.crampsSeverity)));
-  summary.appendChild(buildLine("Nutrients known:", formatAnswer(state.answers.nutrients)));
-  summary.appendChild(buildLine("Diet changes (past 3 months):", formatAnswer(state.answers.dietChange)));
-  summary.appendChild(buildLine("Diet change details:", formatAnswer(state.answers.dietChangeDetails)));
-
-  const likert = pages.find(p => p.type === "likert");
-  likert.likertItems.forEach(item => {
-    summary.appendChild(buildLine(item.label, formatAnswer(state.answers[item.key])));
-  });
 
   surveyContainer.appendChild(summary);
   prevBtn.disabled = true;
