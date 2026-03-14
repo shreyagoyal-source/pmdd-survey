@@ -334,6 +334,8 @@ nextBtn.addEventListener("click", () => {
   showSummary();
 });
 
+renderSurvey();
+
 beginBtn.addEventListener("click", () => {
   intro.style.display = "none";
   surveyContainer.style.display = "block";
