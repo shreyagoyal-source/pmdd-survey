@@ -91,10 +91,11 @@ const state = {
   answers: {},
 };
 
+const intro = document.getElementById("intro");
+const beginBtn = document.getElementById("beginBtn");
 const surveyContainer = document.getElementById("surveyContainer");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-const progressText = document.getElementById("progressText");
+const nav = document.querySelector(".survey__nav");
+const footer = document.querySelector(".survey__footer");
 
 function buildPage(page) {
   const section = document.createElement("section");
@@ -333,4 +334,10 @@ nextBtn.addEventListener("click", () => {
   showSummary();
 });
 
-renderSurvey();
+beginBtn.addEventListener("click", () => {
+  intro.style.display = "none";
+  surveyContainer.style.display = "block";
+  nav.style.display = "flex";
+  footer.style.display = "block";
+  showCurrentPage();
+});

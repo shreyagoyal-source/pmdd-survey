@@ -8,16 +8,21 @@
 </head>
 <body>
   <main class="survey">
-    <header class="survey__header">
-      <h1>Menstrual Health & Nutrition Survey</h1>
-      <p class="survey__purpose">Help us understand how diet and symptoms relate to your menstrual experience. Your responses are anonymous and will only be used for research insights.</p>
-    </header>
+    <div class="intro" id="intro">
+      <header class="survey__header">
+        <h1>Menstrual Health & Nutrition Survey</h1>
+        <p class="survey__purpose">Help us understand how diet and symptoms relate to your menstrual experience. Your responses are anonymous and will only be used for research insights.</p>
+      </header>
+      <button type="button" id="beginBtn" class="btn btn--primary">
+        Begin Survey
+      </button>
+    </div>
 
-    <section class="survey__container" id="surveyContainer">
+    <section class="survey__container" id="surveyContainer" style="display: none;">
       <!-- Pages will be injected here -->
     </section>
 
-    <nav class="survey__nav">
+    <nav class="survey__nav" style="display: none;">
       <button type="button" id="prevBtn" class="btn btn--secondary" disabled>
         ← Previous
       </button>
@@ -26,8 +31,8 @@
       </button>
     </nav>
 
-    <footer class="survey__footer">
-      <p class="survey__progress" id="progressText">Page 1 of 6</p>
+    <footer class="survey__footer" style="display: none;">
+      <p class="survey__progress" id="progressText">Page 1 of 5</p>
     </footer>
   </main>
 

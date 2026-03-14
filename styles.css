@@ -22,9 +22,13 @@ body {
   padding: 28px 28px 18px;
 }
 
-.survey__header {
+.intro {
   text-align: center;
   margin-bottom: 26px;
+}
+
+.intro .btn {
+  margin-top: 20px;
 }
 
 .survey__header h1 {
